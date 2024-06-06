@@ -33,9 +33,9 @@ def upload_files():
         y = (i // 3) * target_size[1]
         grid_image.paste(img, (x, y))
 
-    output_path = os.path.join(PROCESSED_FOLDER, 'elmo_grid.jpg')
+    output_path = os.path.join(PROCESSED_FOLDER, 'threebythree_grid.jpg')
     grid_image.save(output_path)
-    return send_file(output_path, as_attachment=True, download_name='elmo_grid.jpg')
+    return send_file(output_path, as_attachment=True, download_name='threebythree_grid.jpg')
 
 if __name__ == '__main__':
     app.run(debug=True)
